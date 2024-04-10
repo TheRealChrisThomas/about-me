@@ -1,13 +1,11 @@
 ---
 import { Image } from 'astro:assets'
-import NotFoundGorrilla from '@/images/404-gorilla.jpg'
 import Layout from '@/layouts/Layout.astro'
 ---
 
 <Layout title='Page Not Found'>
   <div class='container'>
     <h1>404</h1>
-    <Image class='image' src={NotFoundGorrilla} alt='Page Not Found' />
     <p>Sorry, but we were not able to find the page you are looking for</p>
   </div>
 </Layout>

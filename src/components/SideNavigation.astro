@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets'
-import Me from '../images/me.jpg'
+import Me from '../images/professional.jpeg'
 import Icon from 'astro-icon'
 import { getStaticPaths } from '@/pages/story/[...slug].astro'
 
@@ -10,8 +10,8 @@ const stories = await getStaticPaths()
 <div class='content'>
   <div class='contact'>
     <Image class='me' src={Me} alt='Me' width='400' />
-    <a href='/about-me'><h1 class='name'>Adam Jelinek</h1></a>
-    <p class='title'>Technology Director | Entrepreneur</p>
+    <a href='/'><h1 class='name'>Chris Thomas</h1></a>
+    <p class='title'>Technology Manager | Entrepreneur</p>
   </div>
   <Icon class='hamburger-button' name='ic:sharp-menu' />
   <nav class='nav'>
@@ -19,7 +19,7 @@ const stories = await getStaticPaths()
       {
         stories.map(story => (
           <li>
-            <a href={`/about-me/story/${story.params.slug}`}>{story.props.title}</a>
+            <a href={`/story/${story.params.slug}`}>{story.props.title}</a>
           </li>
         ))
       }
